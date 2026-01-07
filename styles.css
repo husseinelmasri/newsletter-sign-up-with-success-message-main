@@ -1,0 +1,318 @@
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+
+  --gradient: linear-gradient(
+    90deg,
+    rgba(255, 84, 120, 1) 0%,
+    rgba(255, 103, 62, 1) 100%
+  );
+
+  --font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--dark-slate-grey);
+  color: var(--dark-slate-grey);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 30px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  padding: 20px;
+  min-height: 600px;
+}
+
+.form-section {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.description {
+  margin-bottom: 25px;
+  color: var(--charcoal-grey);
+}
+
+.benefits-list {
+  margin-bottom: 35px;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.benefit-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="%23FF6155"/><path stroke="%23FFF" stroke-width="2" d="M6 11.381L8.735 14 15 8"/></g></svg>');
+  background-repeat: no-repeat;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.error-label {
+  color: var(--tomato);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: none;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  font-family: var(--font-family);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--dark-slate-grey);
+}
+
+.form-input.error {
+  border-color: var(--tomato);
+  background-color: rgba(255, 98, 87, 0.1);
+  color: var(--tomato);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 18px;
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--font-family);
+}
+
+.submit-btn:hover {
+  background-image: var(--gradient);
+  box-shadow: 0 10px 20px rgba(255, 98, 87, 0.3);
+}
+
+/* Right Column - Illustration */
+.illustration-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.illustration-desktop {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.illustration-mobile {
+  display: none;
+}
+
+/* Success Message Card */
+.success-card {
+  background-color: var(--white);
+  border-radius: 30px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  padding: 60px;
+  max-width: 480px;
+  display: none;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="%23FF6A3A"/><stop offset="100%" stop-color="%23FF527B"/></linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(%23a)"/><path stroke="%23FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>');
+  background-size: contain;
+  margin-bottom: 30px;
+}
+
+.success-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.confirmation-text {
+  margin-bottom: 30px;
+  color: var(--charcoal-grey);
+  line-height: 1.5;
+}
+
+.user-email {
+  font-weight: 700;
+}
+
+.dismiss-btn {
+  width: 100%;
+  padding: 18px;
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--font-family);
+}
+
+.dismiss-btn:hover {
+  background-image: var(--gradient);
+  box-shadow: 0 10px 20px rgba(255, 98, 87, 0.3);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    background-color: var(--white);
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .card {
+    flex-direction: column;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .form-section {
+    padding: 20px 10px;
+    order: 2;
+  }
+  .form-label {
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+  .description {
+    font-size: 0.8rem;
+  }
+  .benefit span {
+    font-size: 0.9rem;
+  }
+  .illustration-section {
+    justify-content: center;
+    padding: 10px;
+  }
+  .illustration-section img {
+    border-radius: 10px;
+  }
+  .illustration-desktop {
+    display: none;
+  }
+
+  .illustration-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .success-card {
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .success-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Attribution */
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--grey);
+}
+
+.attribution a {
+  color: var(--tomato);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
