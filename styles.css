@@ -48,7 +48,7 @@ body {
 
 .form-section {
   flex: 1;
-  padding: 60px 40px;
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +57,7 @@ body {
 .title {
   font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   line-height: 1;
 }
 
@@ -85,7 +85,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Form Styles */
 .form-group {
   margin-bottom: 25px;
 }
