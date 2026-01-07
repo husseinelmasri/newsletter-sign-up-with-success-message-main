@@ -6,7 +6,6 @@
   --white: hsl(0, 0%, 100%);
 
   --gradient: linear-gradient(
-    90deg,
     rgba(255, 84, 120, 1) 0%,
     rgba(255, 103, 62, 1) 100%
   );
@@ -22,7 +21,7 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--dark-slate-grey);
+  background-color: var(--charcoal-grey);
   color: var(--dark-slate-grey);
   min-height: 100vh;
   display: flex;
